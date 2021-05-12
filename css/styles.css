@@ -1,0 +1,21 @@
+.primary-nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.primary-nav li {
+  padding-right: 15px;
+}
+
+.primary-nav a {
+  text-decoration: none;
+}
+
+.secondary-nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.secondary-nav li {
+  padding-right: 15px;
+}
