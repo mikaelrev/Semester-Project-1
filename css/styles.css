@@ -1,21 +1,113 @@
-.primary-nav ul {
-  display: flex;
-  list-style-type: none;
+/* Global */
+body {
+  background-color: orange;
 }
 
-.primary-nav li {
+.primary-nav {
+  background-color: orange;
+  max-width: 100%;
+}
+
+.primary-nav ul,
+.secondary-nav ul {
+  display: flex;
+  list-style-type: none;
+  background-color: pink;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.primary-nav li,
+.secondary-nav li {
   padding-right: 15px;
 }
 
 .primary-nav a {
+  padding: 20px 15px;
   text-decoration: none;
+  color: black;
+  background-color: red;
 }
 
-.secondary-nav ul {
+footer {
   display: flex;
-  list-style-type: none;
+  justify-content: space-evenly;
+  background-color: #054ba6;
 }
 
-.secondary-nav li {
-  padding-right: 15px;
+footer ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.cta {
+  background-color: #f25244;
+  padding: 5px 10px;
+}
+
+/* Home Page */
+
+.welcome-section {
+  text-align: center;
+}
+
+.welcome-articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 50px;
+}
+
+.welcome-articles_specific {
+  width: 450px;
+  margin: auto;
+}
+
+/* Explore */
+
+.explore-articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 50px;
+}
+
+.explore-articles_specific {
+  width: 450px;
+  margin: auto;
+}
+
+/* Visit */
+
+.visit-page {
+  display: flex;
+}
+
+.visit_opening-hours {
+  flex: 1;
+}
+
+.visit-info {
+  flex: 2;
+}
+
+/* Education */
+.education-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: left;
+}
+
+.education-info p {
+  width: 700px;
+}
+
+/* Events */
+
+.events-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.events-articles {
+  width: 450px;
+  padding-bottom: 50px;
 }
