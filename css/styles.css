@@ -1,38 +1,58 @@
 /* Global */
+
 body {
-  background-color: orange;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 .primary-nav {
-  background-color: orange;
   max-width: 100%;
+  padding: 20px 0px;
 }
 
 .primary-nav ul,
 .secondary-nav ul {
   display: flex;
   list-style-type: none;
-  background-color: pink;
   justify-content: space-between;
-  padding: 30px;
-}
-
-.primary-nav li,
-.secondary-nav li {
-  padding-right: 15px;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 .primary-nav a {
   padding: 20px 15px;
   text-decoration: none;
   color: black;
-  background-color: red;
+}
+
+.logo {
+  flex: 5;
+}
+
+.right-nav {
+  flex: 1;
+}
+
+.secondary-nav {
+  background-color: #054ba6;
+}
+
+.secondary-nav li {
+  justify-content: space-between;
+  padding: 15px;
+  color: #fff;
+}
+
+h1 {
+  margin: 0px 50px;
 }
 
 footer {
   display: flex;
   justify-content: space-evenly;
   background-color: #054ba6;
+  color: #fff;
 }
 
 footer ul {
@@ -67,18 +87,18 @@ footer ul {
 .explore-articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 50px;
+  margin: 0px 50px 50px 50px;
 }
 
 .explore-articles_specific {
   width: 450px;
-  margin: auto;
 }
 
 /* Visit */
 
 .visit-page {
   display: flex;
+  margin: 0px 50px;
 }
 
 .visit_opening-hours {
@@ -94,6 +114,7 @@ footer ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: left;
+  margin: 0px 50px;
 }
 
 .education-info p {
@@ -105,6 +126,7 @@ footer ul {
 .events-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 0px 50px;
 }
 
 .events-articles {
