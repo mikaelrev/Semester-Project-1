@@ -6,42 +6,41 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.primary-nav {
-  max-width: 100%;
-  padding: 20px 0px;
-  margin: 20px 0px;
-}
-
 .primary-nav ul,
 .secondary-nav ul {
   display: flex;
   list-style-type: none;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   font-size: 1.2em;
   font-weight: 700;
   margin: 0px;
 }
 
 .primary-nav a {
-  padding: 20px 15px;
   text-decoration: none;
   color: black;
 }
 
 .logo {
   flex: 5;
+  padding: 10px;
+}
+
+.logo img {
+  max-width: 140px;
 }
 
 .right-nav {
-  flex: 1;
+  flex: 3;
 }
 
 .secondary-nav {
   background-color: rgba(5, 75, 166, 0.8);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .secondary-nav li {
-  justify-content: space-between;
   padding: 15px;
   color: #fff;
 }
@@ -49,7 +48,6 @@ body {
 h1 {
   padding: 30px 50px 0px 50px;
   margin: 0px;
-  background-color: #f5f5f5;
 }
 
 h1,
@@ -63,6 +61,7 @@ footer {
   justify-content: space-evenly;
   background-color: rgba(5, 75, 166, 0.8);
   color: #fff;
+  padding: 30px;
 }
 
 footer ul {
@@ -85,35 +84,51 @@ footer ul {
   text-align: center;
 }
 
+.welcome-section h1 {
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+.welcome-image {
+  width: 1200px;
+  margin-top: 50px;
+}
+
 .welcome-articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 50px;
+  margin-bottom: 200px;
 }
 
 .welcome-articles_specific {
-  width: 450px;
+  width: 350px;
   margin: auto;
+}
+
+.welcome-articles_specific img {
+  width: 350px;
 }
 
 /* Explore */
 
 .explore-articles {
-  background-color: #f5f5f5;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .explore-articles_specific {
-  width: 450px;
-  margin: 0px 50px 50px 50px;
+  width: 350px;
+  margin: 50px 0px 200px 50px;
+}
+
+.explore-articles_specific img {
+  width: 350px;
 }
 
 /* Visit */
 
 .visit-page {
   display: flex;
-  background-color: #f5f5f5;
 }
 
 .visit_opening-hours {
@@ -121,21 +136,34 @@ footer ul {
   flex: 1;
 }
 
+.visit_opening-hours img {
+  margin-top: 50px;
+  width: 200px;
+}
+
 .visit-info {
   flex: 2;
   margin-right: 50px;
+  padding-bottom: 100px;
+}
+
+.visit-info img {
+  width: 400px;
 }
 
 /* Education */
+.education-page {
+  margin: 50px 50px 100px 50px;
+}
+
+.education-page img {
+  width: 100%;
+}
+
 .education-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: left;
-  background-color: #f5f5f5;
-}
-
-.education-info p {
-  width: 700px;
+  gap: 40px;
 }
 
 /* Events */
@@ -143,10 +171,13 @@ footer ul {
 .events-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: #f5f5f5;
 }
 
 .events-articles {
-  width: 450px;
-  margin: 0px 50px 50px 50px;
+  width: 350px;
+  margin: 30px 50px 200px 50px;
+}
+
+.events-articles img {
+  width: 100%;
 }
