@@ -9,6 +9,7 @@ body {
 .primary-nav {
   max-width: 100%;
   padding: 20px 0px;
+  margin: 20px 0px;
 }
 
 .primary-nav ul,
@@ -18,6 +19,7 @@ body {
   justify-content: space-between;
   font-size: 1.2em;
   font-weight: 700;
+  margin: 0px;
 }
 
 .primary-nav a {
@@ -35,7 +37,7 @@ body {
 }
 
 .secondary-nav {
-  background-color: #054ba6;
+  background-color: rgba(5, 75, 166, 0.8);
 }
 
 .secondary-nav li {
@@ -59,7 +61,7 @@ h2 {
 footer {
   display: flex;
   justify-content: space-evenly;
-  background-color: #054ba6;
+  background-color: rgba(5, 75, 166, 0.8);
   color: #fff;
 }
 
