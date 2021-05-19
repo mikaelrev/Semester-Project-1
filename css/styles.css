@@ -92,6 +92,14 @@ footer ul {
   border-radius: 3px;
 }
 
+.active {
+  color: pink;
+}
+
+header a:hover {
+  color: #9bcaf2;
+}
+
 /* Home Page */
 
 .welcome-section {
