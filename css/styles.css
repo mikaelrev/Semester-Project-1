@@ -85,17 +85,17 @@ footer ul {
   border-radius: 3px;
 }
 
-.welcome-image,
-.welcome-articles_specific img,
-.explore-articles_specific img,
-.events-articles img,
-.education-page img,
-.visit-page img {
+img {
   border-radius: 3px;
 }
 
 header a:hover {
   color: #9bcaf2;
+}
+
+.right-nav .active {
+  color: #054ba6;
+  font-size: 1.2em;
 }
 
 /* Home Page */
@@ -104,11 +104,6 @@ header a:hover {
   width: 80%;
   margin: 50px auto 0px;
   text-align: center;
-}
-
-.welcome-section p {
-  font-family: "Bebas Neue", cursive;
-  font-size: 25px;
 }
 
 .welcome-articles {
