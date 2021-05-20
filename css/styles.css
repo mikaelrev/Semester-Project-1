@@ -1,5 +1,7 @@
 /* Global */
 
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -51,8 +53,8 @@ body {
 }
 
 h1 {
-  padding: 30px 50px 0px 50px;
-  margin: 0px;
+  padding: 20px 50px 0px 50px;
+  font-size: 35px;
 }
 
 h1,
@@ -92,10 +94,6 @@ footer ul {
   border-radius: 3px;
 }
 
-.active {
-  color: pink;
-}
-
 header a:hover {
   color: #9bcaf2;
 }
@@ -103,11 +101,9 @@ header a:hover {
 /* Home Page */
 
 .welcome-section {
+  width: 80%;
+  margin: 50px auto 0px;
   text-align: center;
-}
-
-.welcome-section h1 {
-  font-size: 35px;
 }
 
 .welcome-section p {
@@ -115,50 +111,48 @@ header a:hover {
   font-size: 25px;
 }
 
-.welcome-image {
-  width: 1200px;
-  margin-top: 50px;
-}
-
 .welcome-articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 200px;
 }
 
 .welcome-articles_specific {
-  width: 350px;
-  margin: 0px auto;
+  width: 70%;
+  margin: 0px auto 200px;
 }
 
-.welcome-articles_specific img {
-  width: 350px;
-}
+/* Explore, home, events, and education */
 
-/* Explore */
-
-.explore-articles {
+.explore-articles,
+.events-page,
+.welcome-articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 0px 50px;
 }
 
-.explore-articles_specific {
-  width: 350px;
-  margin: 50px 0px 200px 50px;
+.explore-articles_specific,
+.events-articles {
+  width: 80%;
+  margin-bottom: 200px;
 }
 
-.explore-articles_specific img {
-  width: 350px;
+.explore-articles_specific img,
+.events-articles img,
+.education-page img,
+.welcome-image,
+.welcome-articles_specific img {
+  width: 100%;
 }
 
 /* Visit */
 
 .visit-page {
   display: flex;
+  margin: 0px 50px;
 }
 
 .visit_opening-hours {
-  margin: 0px 50px;
   flex: 1;
 }
 
@@ -169,21 +163,17 @@ header a:hover {
 
 .visit-info {
   flex: 2;
-  margin-right: 50px;
   padding-bottom: 100px;
 }
 
-.visit-info img {
-  width: 400px;
+.visit-info img,
+.visit-info p {
+  width: 70%;
 }
 
 /* Education */
 .education-page {
-  margin: 50px 50px 100px 50px;
-}
-
-.education-page img {
-  width: 100%;
+  margin: 50px 50px 100px;
 }
 
 .education-info {
@@ -192,18 +182,4 @@ header a:hover {
   gap: 40px;
 }
 
-/* Events */
-
-.events-page {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.events-articles {
-  width: 350px;
-  margin: 30px 50px 200px 50px;
-}
-
-.events-articles img {
-  width: 100%;
-}
+/* Media Queries */
