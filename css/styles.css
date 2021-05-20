@@ -175,6 +175,7 @@ header a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+  width: 65%;
 }
 
 /* Media Queries */
