@@ -98,6 +98,10 @@ header a:hover {
   font-size: 1.2em;
 }
 
+.mobile {
+  display: none;
+}
+
 /* Home Page */
 
 .welcome-section {
@@ -153,7 +157,7 @@ header a:hover {
 
 .visit_opening-hours img {
   margin-top: 50px;
-  width: 200px;
+  width: 70%;
 }
 
 .visit-info {
@@ -179,3 +183,59 @@ header a:hover {
 }
 
 /* Media Queries */
+
+@media screen and (max-width: 800px) {
+  h1 {
+    text-align: center;
+  }
+
+  .primary-nav ul {
+    padding: 50px 50px 10px;
+  }
+
+  .right-nav {
+    flex: none;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .explore-articles,
+  .events-page,
+  .welcome-articles {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .welcome-articles_specific {
+    margin: 0px auto 100px;
+  }
+
+  .visit-page {
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .visit-info {
+    display: block;
+    order: 1;
+  }
+
+  .visit_opening-hours {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .secondary-nav {
+    display: none;
+  }
+}
