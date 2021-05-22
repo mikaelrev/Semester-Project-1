@@ -95,7 +95,6 @@ header a:hover {
 
 .right-nav .active {
   color: #054ba6;
-  font-size: 1.2em;
 }
 
 .mobile {
@@ -179,7 +178,7 @@ header a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  width: 65%;
+  width: 100%;
 }
 
 /* Media Queries */
@@ -195,6 +194,7 @@ header a:hover {
 
   .right-nav {
     flex: none;
+    padding: 10px;
   }
 
   .mobile {
@@ -212,30 +212,74 @@ header a:hover {
   .welcome-articles {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
   }
 
-  .welcome-articles_specific {
-    margin: 0px auto 100px;
+  .explore-articles_specific,
+  .events-articles {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
   }
 
   .visit-page {
     flex-direction: column;
-    text-align: center;
-    justify-items: center;
   }
 
   .visit-info {
-    display: block;
     order: 1;
+    display: block;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .visit-info h2 {
+    margin-top: 75px;
+  }
+
+  .visit-info p {
+    width: 100%;
   }
 
   .visit_opening-hours {
     order: 2;
+    text-align: center;
+    margin-bottom: 100px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .right-nav {
+    font-size: 1rem;
+  }
+
   .secondary-nav {
     display: none;
+  }
+
+  .welcome-section {
+    width: 90%;
+  }
+
+  .welcome-articles {
+    margin: 0px;
+  }
+
+  .education-info {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+
+  .visit-info img {
+    width: 100%;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+  }
+
+  .footer_opening-times {
+    margin-top: 50px;
   }
 }
