@@ -210,9 +210,8 @@ header a:hover {
   .explore-articles,
   .events-page,
   .welcome-articles {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
+    text-align: center;
   }
 
   .explore-articles_specific,
@@ -255,6 +254,10 @@ header a:hover {
 
   .secondary-nav {
     display: none;
+  }
+
+  .search-bar {
+    display: flex;
   }
 
   .welcome-section {
