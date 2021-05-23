@@ -47,6 +47,10 @@ main {
   flex: 1;
 }
 
+.right-nav a {
+  padding: 10px;
+}
+
 .logo {
   flex: 2;
   padding: 10px;
@@ -200,6 +204,9 @@ header a:hover {
 
   .right-nav {
     flex: none;
+  }
+
+  .right-nav a {
     padding: 10px;
   }
 
