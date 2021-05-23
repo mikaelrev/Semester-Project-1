@@ -8,6 +8,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+main {
+  max-width: 1500px;
+}
+
 .primary-nav ul,
 .secondary-nav ul {
   display: flex;
