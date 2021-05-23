@@ -52,15 +52,16 @@ body {
   max-width: 140px;
 }
 
-h1 {
-  padding: 20px 50px 0px 50px;
-  font-size: 35px;
-}
-
 h1,
 h2 {
   font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem;
   color: #054ba6;
+}
+
+h1 {
+  padding: 20px 50px 0px 50px;
+  font-size: 2.2rem;
 }
 
 footer {
@@ -97,7 +98,8 @@ header a:hover {
   color: #054ba6;
 }
 
-.mobile {
+.mobile,
+.welcome-image-mobile {
   display: none;
 }
 
@@ -138,7 +140,7 @@ header a:hover {
 .explore-articles_specific img,
 .events-articles img,
 .education-page img,
-.welcome-image,
+.welcome-image-desktop,
 .welcome-articles_specific img {
   width: 100%;
 }
@@ -256,16 +258,22 @@ header a:hover {
     display: none;
   }
 
-  .search-bar {
-    display: flex;
-  }
-
   .welcome-section {
     width: 90%;
   }
 
   .welcome-articles {
     margin: 0px;
+  }
+
+  .welcome-image-desktop {
+    display: none;
+  }
+
+  .welcome-image-mobile {
+    display: block;
+    width: 90%;
+    margin: auto;
   }
 
   .education-info {
@@ -275,6 +283,10 @@ header a:hover {
 
   .visit-info img {
     width: 100%;
+  }
+
+  .education-page {
+    margin: 30px 30px 100px;
   }
 
   footer {
