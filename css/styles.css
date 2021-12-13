@@ -12,8 +12,11 @@ main {
   max-width: 1500px;
 }
 
-.primary-nav ul,
-.secondary-nav ul {
+nav {
+  background-color: lightgrey;
+}
+
+nav ul {
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -23,34 +26,14 @@ main {
   margin: 0px;
 }
 
-.secondary-nav {
-  background-color: rgba(5, 75, 166, 0.8);
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  color: #fff;
-}
-
-.search-bar {
-  background-color: white;
-  color: black;
-  padding: 3px 50px;
-  border-radius: 3px;
-  font-weight: 100;
-}
-
-.right-nav {
-  flex: 1;
-}
-
-.right-nav a {
+nav a {
   text-decoration: none;
   padding: 10px;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue";
   color: rgba(5, 75, 166, 0.8);
 }
 
 .logo {
-  flex: 2;
   padding: 10px;
 }
 
@@ -60,7 +43,7 @@ main {
 
 h1,
 h2 {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue";
   font-size: 1.6rem;
   color: #054ba6;
 }
@@ -209,7 +192,8 @@ header a:hover {
     padding: 10px;
   }
 
-  .secondary-nav {
+  .secondary-nav,
+  .desktop {
     display: none;
   }
 
@@ -217,10 +201,6 @@ header a:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-  }
-
-  .desktop {
-    display: none;
   }
 
   .explore-articles,
