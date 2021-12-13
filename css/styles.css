@@ -162,6 +162,10 @@ header a:hover {
   width: 70%;
 }
 
+.visit-info p {
+  margin-bottom: 3rem;
+}
+
 /* Education */
 .education-page {
   width: 80%;
