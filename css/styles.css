@@ -15,7 +15,7 @@ main {
 
 nav ul,
 footer {
-  background-color: rgba(211, 211, 211, 0.666);
+  background-color: rgba(5, 75, 166, 0.8);
 }
 
 nav ul {
@@ -33,7 +33,11 @@ nav a {
   text-decoration: none;
   padding: 10px;
   font-family: "Bebas Neue";
-  color: rgba(5, 75, 166, 0.8);
+}
+
+nav a,
+footer {
+  color: white;
 }
 
 .logo {
@@ -62,7 +66,6 @@ h1 {
 footer {
   display: flex;
   justify-content: space-evenly;
-  color: #054ba6;
   padding: 30px;
 }
 
