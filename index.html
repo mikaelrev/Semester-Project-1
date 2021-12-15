@@ -10,10 +10,10 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="main-nav">
+        <button class="nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
         <nav>
-            <div class="logo"><a href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a></div>
-            <ul>
+            <ul id="navigation" class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="explore.html">Explore</a></li>
                 <li><a href="events.html">Events</a></li>
@@ -21,6 +21,9 @@
                 <li><a href="visit.html">Visit</a></li>
             </ul>
         </nav>
+        <div class="logo"><a href="index.html">
+            <img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
+        </div>
     </header>
     <main>
         <section class="welcome-container">

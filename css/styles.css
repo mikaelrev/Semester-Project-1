@@ -13,37 +13,8 @@ main {
   margin: auto;
 }
 
-nav ul,
 footer {
   background-color: rgba(5, 75, 166, 0.8);
-}
-
-nav ul {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0px;
-  padding: 1.5rem;
-}
-
-nav a {
-  text-decoration: none;
-  padding: 10px;
-  font-family: "Bebas Neue";
-}
-
-nav a,
-footer {
-  color: white;
-}
-
-.logo {
-  margin: auto;
-  padding: 10px;
-  width: 150px;
 }
 
 img {
@@ -83,13 +54,48 @@ img {
   border-radius: 3px;
 }
 
-header a:hover {
-  color: #9bcaf2;
+/* Header */
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
 }
 
-.mobile,
-.welcome-image-mobile {
-  display: none;
+.logo {
+  width: 10rem;
+  margin: 2rem 10rem;
+}
+
+.navigation {
+  position: fixed;
+  inset: 0 40% 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+  font-size: 3rem;
+  padding: 10rem 2rem;
+  margin: 0;
+  background: #054ba6c9;
+}
+
+.navigation a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  position: absolute;
+  z-index: 9999;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(/images/menu_black_24dp.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  top: 4rem;
+  left: 4rem;
 }
 
 /* Home Page */
@@ -245,29 +251,6 @@ header a:hover {
 /* Media Queries */
 
 @media screen and (max-width: 800px) {
-  .primary-nav ul {
-    padding: 50px 50px 10px;
-  }
-
-  .right-nav {
-    flex: none;
-  }
-
-  .right-nav a {
-    padding: 10px;
-  }
-
-  .secondary-nav,
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
   .explore-articles,
   .events-page,
   .welcome-articles {
