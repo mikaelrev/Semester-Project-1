@@ -13,8 +13,12 @@ main {
   margin: auto;
 }
 
+.museum,
+.welcome-article-one,
+.welcome-article-two,
+.welcome-article-three,
 footer {
-  background-color: rgba(5, 75, 166, 0.8);
+  background-color: rgba(5, 75, 166, 0.347);
 }
 
 img {
@@ -63,46 +67,50 @@ img {
 
 .logo {
   width: 10rem;
-  margin: 2rem 10rem;
+  margin: 2rem auto;
+  z-index: 1000;
 }
 
 .navigation {
   position: fixed;
-  inset: 0 40% 0 0;
+  inset: 0 60% 0 0;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   list-style-type: none;
   font-size: 3rem;
-  padding: 10rem 2rem;
+  padding: 10rem 4rem;
   margin: 0;
-  background: #054ba6c9;
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(-100%);
+  transition: transform 250ms ease-out;
+}
+
+.navigation[data-visible="true"] {
+  transform: translateX(0%);
 }
 
 .navigation a {
   color: black;
   text-decoration: none;
+  font-size: 3rem;
 }
 
 .nav-toggle {
   position: absolute;
   z-index: 9999;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-image: url(/images/menu_black_24dp.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   border: none;
-  top: 4rem;
-  left: 4rem;
+  top: 3rem;
+  left: 3rem;
 }
 
 /* Home Page */
-
-.welcome-container {
-  margin: 2rem auto;
-}
 
 .welcome-container h1,
 .welcome-container h2 {
@@ -110,28 +118,32 @@ img {
 }
 
 .welcome-image {
+  width: 80%;
+  margin: 0 auto 2rem;
+}
+
+.welcome-image img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
-  object-position: center;
-  margin-bottom: 3rem;
+}
+
+.mobile {
+  display: none;
 }
 
 .museum {
   text-align: center;
-  background-color: rgba(5, 75, 166, 0.143);
   color: black;
   padding: 3rem;
   margin-bottom: 5rem;
 }
 
-.museum h1,
 .museum h2,
 .museum a {
   color: black;
 }
 
 .museum h1 {
+  color: #f25244;
   font-size: 3rem;
 }
 
@@ -174,7 +186,6 @@ img {
   align-items: center;
   text-align: center;
   padding: 1rem;
-  background-color: rgba(5, 75, 166, 0.143);
 }
 
 .welcome-article-one *,
@@ -251,6 +262,14 @@ img {
 /* Media Queries */
 
 @media screen and (max-width: 800px) {
+  .navigation a {
+    font-size: 2rem;
+  }
+
+  .navigation {
+    inset: 0 40% 0 0;
+  }
+
   .explore-articles,
   .events-page,
   .welcome-articles {
@@ -292,30 +311,25 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-  .right-nav {
-    font-size: 1.1rem;
-  }
-
-  .right-nav .active {
-    font-size: 1.3rem;
-  }
-
-  .welcome-section {
-    width: 90%;
-  }
-
-  .welcome-articles {
-    margin: 0px;
-  }
-
-  .welcome-image-desktop {
+  .desktop {
     display: none;
   }
 
-  .welcome-image-mobile {
+  .mobile {
     display: block;
-    width: 90%;
-    margin: auto;
+  }
+
+  .welcome-image {
+    width: 100%;
+  }
+
+  .museum-info {
+    width: 100%;
+  }
+
+  .museum-info-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .education-info {

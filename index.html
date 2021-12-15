@@ -13,7 +13,7 @@
     <header class="main-nav">
         <button class="nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
         <nav>
-            <ul id="navigation" class="navigation">
+            <ul id="navigation" data-visible="false" class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="explore.html">Explore</a></li>
                 <li><a href="events.html">Events</a></li>
@@ -28,7 +28,8 @@
     <main>
         <section class="welcome-container">
             <div class="welcome-image">
-                <img class="welcome-image" src="images/scientific-2040795_128_3.jpg" alt="Woman doing a science experiment">
+                <img class="desktop" src="images/scientific-2040795_128_3.jpg" alt="Woman doing a science experiment">
+                <img class="mobile" src="images/scientific-2040795_128_3_small.jpg" alt="Woman doing a science experiment">
             </div>
         </section>
         <section class="museum">
@@ -86,6 +87,7 @@
                <li>Sunday: 09:00-16:00</li>
            </ul>
        </div> 
-    </footer>    
+    </footer>   
+    <script src="js/hamburger.js"></script> 
 </body>
 </html>
