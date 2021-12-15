@@ -9,7 +9,7 @@ body {
 }
 
 main {
-  max-width: 1300px;
+  max-width: 90%;
   margin: auto;
 }
 
@@ -46,8 +46,9 @@ footer {
   width: 150px;
 }
 
-.logo img {
-  width: 100%;
+img {
+  max-width: 100%;
+  display: block;
 }
 
 h1,
@@ -55,12 +56,7 @@ h2 {
   font-family: "Bebas Neue";
   font-size: 1.6rem;
   color: #054ba6;
-}
-
-h1 {
-  text-align: center;
-  margin: 3rem 0px;
-  font-size: 2rem;
+  margin: 0;
 }
 
 footer {
@@ -98,27 +94,93 @@ header a:hover {
 
 /* Home Page */
 
-.welcome-section {
-  width: 80%;
-  margin: 50px auto 0px;
+.welcome-container {
+  margin: 2rem auto;
+}
+
+.welcome-container h1,
+.welcome-container h2 {
   text-align: center;
+}
+
+.welcome-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 3rem;
+}
+
+.museum {
+  text-align: center;
+  background-color: rgba(5, 75, 166, 0.143);
+  color: black;
+  padding: 3rem;
+  margin-bottom: 5rem;
+}
+
+.museum h1,
+.museum h2,
+.museum a {
+  color: black;
+}
+
+.museum h1 {
+  font-size: 3rem;
+}
+
+.museum h2 {
+  padding-top: 1.8rem;
+  margin: 0;
+}
+
+.museum-info-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.museum-info {
+  width: 40%;
+}
+
+.museum h2 {
+  font-size: 2rem;
+}
+
+.museum-info a {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .welcome-articles {
   display: grid;
+  gap: 2rem;
+  margin-bottom: 8rem;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.welcome-articles_specific {
-  width: 70%;
-  margin: 0px auto 200px;
+.welcome-article-one,
+.welcome-article-two,
+.welcome-article-three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(5, 75, 166, 0.143);
+}
+
+.welcome-article-one *,
+.welcome-article-two *,
+.welcome-article-three * {
+  width: 80%;
 }
 
 /* Explore, home, events, and education */
 
 .explore-articles,
-.events-page,
-.welcome-articles {
+.events-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -133,9 +195,7 @@ header a:hover {
 
 .explore-articles_specific img,
 .events-articles img,
-.education-page img,
-.welcome-image-desktop,
-.welcome-articles_specific img {
+.education-page img {
   width: 100%;
 }
 
@@ -185,10 +245,6 @@ header a:hover {
 /* Media Queries */
 
 @media screen and (max-width: 800px) {
-  h1 {
-    text-align: center;
-  }
-
   .primary-nav ul {
     padding: 50px 50px 10px;
   }
