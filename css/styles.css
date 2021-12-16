@@ -22,14 +22,14 @@ footer {
 }
 
 h1 {
-  padding-left: 2rem;
+  font-size: 3rem;
+  padding-left: 10%;
 }
 
 h1,
 h2,
 h3 {
   font-family: "Bebas Neue";
-  font-size: 1.6rem;
   color: #054ba6;
   margin: 0;
 }
@@ -78,13 +78,44 @@ img {
   border-radius: 3px;
 }
 
+.cta,
+.front-page-img,
+.explore-articles,
+.explore-text * {
+  margin-bottom: 2rem;
+}
+
+.front-page-info h2,
+.explore-container,
+.events-articles,
+.explore-articles,
+.events-container,
+.visit-page,
+.education-container {
+  padding: 2rem;
+}
+
+.navigation,
+.welcome-articles,
+.education-info,
+.explore-container,
+.events-articles,
+.events-container {
+  gap: 2rem;
+}
+
+.front-page-info h1,
+.front-page-info h2,
+.cta {
+  color: #f25244;
+}
+
 .cta {
   background-color: #f25244;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
   padding: 5px 10px;
-  margin-bottom: 2rem;
 }
 
 /* Header */
@@ -101,9 +132,9 @@ img {
 .navigation {
   position: fixed;
   inset: 0 60% 0 0;
-  gap: 2rem;
   list-style-type: none;
   font-size: 3rem;
+  gap: 0.5rem;
   padding: 10rem 4rem;
   overflow: hidden;
   margin: 0;
@@ -118,7 +149,8 @@ img {
 
 .navigation a {
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .nav-toggle {
@@ -150,11 +182,6 @@ img {
   width: 80%;
 }
 
-.front-page-img {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 .front-page-img img {
   width: 100%;
   height: 400px;
@@ -168,30 +195,23 @@ img {
   margin: 0 auto 5rem;
 }
 
-.front-page-info h1,
-.front-page-info h2 {
-  color: #f25244;
-}
-
 .front-page-info h1 {
-  font-size: 40px;
+  font-size: 3rem;
   padding: 0;
 }
 
 .navigation a,
-.front-page-info a,
 .front-page-info h3 {
   color: black;
 }
 
 .front-page-info h2 {
-  font-size: 24px;
-  padding: 2rem;
+  font-size: 2rem;
   margin: 0;
 }
 
 .front-page-info h3 {
-  font-size: 24px;
+  font-size: 1.8rem;
 }
 
 .info-container {
@@ -203,14 +223,12 @@ img {
   width: 40%;
 }
 
-.info a {
-  font-size: 1.2rem;
-  font-weight: 700;
+.info * {
+  margin-bottom: 1rem;
 }
 
 .welcome-articles {
   display: grid;
-  gap: 2rem;
   margin-bottom: 8rem;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -231,17 +249,13 @@ img {
 
 /* Explore, home, events, and education */
 
-.explore-container,
-.events-articles {
-  gap: 2rem;
-  padding: 2rem;
+.explore-container {
+  margin: auto;
 }
 
 .explore-articles {
   background: rgba(5, 75, 166, 0.347);
   gap: 5rem;
-  padding: 2rem;
-  margin-bottom: 2rem;
 }
 
 .explore-articles img {
@@ -251,12 +265,10 @@ img {
 
 .explore-text * {
   width: 100%;
-  margin-bottom: 2rem;
 }
 
 .events-container {
-  gap: 2rem;
-  padding: 2rem;
+  margin: auto;
 }
 
 .events-articles {
@@ -276,7 +288,7 @@ img {
 /* Visit */
 
 .visit-page {
-  padding: 2rem;
+  margin: auto;
 }
 
 .visit_opening-hours {
@@ -285,12 +297,11 @@ img {
 }
 
 .visit_opening-hours img {
-  margin-top: 25px;
   width: 70%;
 }
 
 .visit-info {
-  flex: 2;
+  flex: 1;
   padding-bottom: 100px;
 }
 
@@ -304,14 +315,14 @@ img {
 }
 
 /* Education */
+
 .education-container {
-  padding: 2rem;
+  margin: auto;
 }
 
 .education-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
 }
 
 /* Media Queries */
@@ -325,8 +336,14 @@ img {
     inset: 0 40% 0 0;
   }
 
-  h1 {
+  h1,
+  .explore-articles,
+  .visit-info,
+  .visit_opening-hours {
     text-align: center;
+  }
+
+  h1 {
     padding: 0;
   }
 
@@ -338,7 +355,6 @@ img {
     flex-direction: column;
     width: 80%;
     align-items: center;
-    text-align: center;
     gap: 2rem;
   }
 
@@ -349,7 +365,6 @@ img {
   .visit-info {
     order: 1;
     display: block;
-    text-align: center;
     padding: 0px;
   }
 
@@ -363,7 +378,6 @@ img {
 
   .visit_opening-hours {
     order: 2;
-    text-align: center;
     margin-bottom: 100px;
   }
 }
@@ -382,7 +396,7 @@ img {
   }
 
   .info {
-    width: 100%;
+    width: 80%;
   }
 
   .info-container {
