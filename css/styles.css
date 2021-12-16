@@ -13,10 +13,6 @@ main {
   margin: auto;
 }
 
-.front-page-info,
-.welcome-article-one,
-.welcome-article-two,
-.welcome-article-three,
 footer {
   background-color: rgba(5, 75, 166, 0.347);
 }
@@ -36,30 +32,20 @@ h3 {
 
 footer,
 .main-nav,
-.navigation,
-.info-container,
-.welcome-article-one,
-.welcome-article-two,
-.welcome-article-three,
-.explore-container,
-.explore-articles,
-.events-container,
-.events-articles,
-.education-container,
-.visit-page,
-.visit_opening-hours {
+.navigation {
   display: flex;
 }
 
+.width {
+  width: 80%;
+}
+
+.mobile {
+  display: none;
+}
+
 .main-nav,
-.navigation,
-.welcome-article-one,
-.welcome-article-two,
-.welcome-article-three,
-.explore-container,
-.events-articles,
-.education-container,
-.visit_opening-hours {
+.navigation {
   flex-direction: column;
 }
 
@@ -78,27 +64,12 @@ img {
   border-radius: 3px;
 }
 
-.cta,
-.front-page-img,
-.explore-articles,
-.explore-text * {
+.cta {
   margin-bottom: 2rem;
 }
 
-.front-page-info h2,
-.explore-container,
-.events-articles,
-.explore-articles,
-.events-container,
-.visit-page,
-.education-container {
-  padding: 2rem;
-}
-
 .navigation,
-.welcome-articles,
 .education-info,
-.explore-container,
 .events-articles,
 .events-container {
   gap: 2rem;
@@ -151,6 +122,7 @@ img {
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 700;
+  color: black;
 }
 
 .nav-toggle {
@@ -174,12 +146,18 @@ img {
 
 /* Home Page */
 
-.mobile {
-  display: none;
+.front-page-info,
+.welcome-article {
+  background-color: rgba(5, 75, 166, 0.347);
 }
 
-.width {
-  width: 80%;
+.welcome-articles *,
+.info-container {
+  display: flex;
+}
+
+.welcome-article {
+  flex-direction: column;
 }
 
 .front-page-img img {
@@ -187,6 +165,7 @@ img {
   height: 400px;
   object-fit: cover;
   object-position: center left;
+  margin-bottom: 2rem;
 }
 
 .front-page-info {
@@ -200,18 +179,15 @@ img {
   padding: 0;
 }
 
-.navigation a,
-.front-page-info h3 {
-  color: black;
-}
-
 .front-page-info h2 {
+  padding: 2rem;
   font-size: 2rem;
   margin: 0;
 }
 
 .front-page-info h3 {
   font-size: 1.8rem;
+  color: black;
 }
 
 .info-container {
@@ -219,7 +195,7 @@ img {
   justify-content: center;
 }
 
-.info {
+.info-container > * {
   width: 40%;
 }
 
@@ -229,69 +205,97 @@ img {
 
 .welcome-articles {
   display: grid;
+  gap: 2rem;
   margin-bottom: 8rem;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.welcome-article-one,
-.welcome-article-two,
-.welcome-article-three {
+.welcome-articles > div {
   align-items: center;
   text-align: center;
   padding: 1rem;
 }
 
-.welcome-article-one *,
-.welcome-article-two *,
-.welcome-article-three * {
+.welcome-article * {
   width: 80%;
 }
 
-/* Explore, home, events, and education */
+/* Explore */
 
 .explore-container {
+  gap: 2rem;
+  padding: 2rem;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.explore-articles {
-  background: rgba(5, 75, 166, 0.347);
+.explore-container > * {
   gap: 5rem;
+  background: rgba(5, 75, 166, 0.347);
+  padding: 2rem;
+  display: flex;
 }
 
-.explore-articles img {
+.explore-container > * img {
   max-width: 300px;
   object-fit: cover;
 }
 
 .explore-text * {
   width: 100%;
+  margin-bottom: 2rem;
 }
+
+/* Events */
 
 .events-container {
   margin: auto;
+}
+
+.events-container,
+.events-articles {
+  display: flex;
+  padding: 2rem;
 }
 
 .events-articles {
   background: rgba(5, 75, 166, 0.347);
   width: 80%;
   justify-content: center;
-}
-
-.events-text {
-  width: 80%;
+  flex-direction: column;
 }
 
 .events-articles img {
   width: 100%;
 }
 
+.events-text {
+  width: 80%;
+}
+
+/* Education */
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
 /* Visit */
 
+.visit-page,
+.visit_opening-hours {
+  display: flex;
+}
+
 .visit-page {
+  padding: 2rem;
   margin: auto;
 }
 
 .visit_opening-hours {
+  flex-direction: column;
   gap: 1rem;
   flex: 1;
 }
