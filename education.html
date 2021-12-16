@@ -4,35 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Educational goals for the museum">
-    <title>Community Science Museum | Education</title>
+    <title>Education | Community Science Museum</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="primary-nav">
-            <ul>
-                <li class="logo desktop"><a href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a></li>
-                <li class="right-nav"><a href="explore.html">Explore</a></li>
-                <li class="right-nav"><a href="events.html">Events</a></li>
-                <li class="right-nav"><a class="active" href="education.html">Education</a></li>
-                <li class="right-nav"><a href="visit.html">Visit</a></li>
-            </ul>
-            <a class="logo mobile" href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
-        </nav>
-        <nav class="secondary-nav">
-            <ul>
-                <li>Support</li>
-                <li>Internships</li>
-                <li>Volunteer</li>
-                <li>Shop</li>
-                <li class="search-bar">Search</li>
+    <header class="main-nav">
+        <button class="nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
+        <nav>
+            <ul id="navigation" data-visible="false" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="visit.html">Visit</a></li>
             </ul>
         </nav>
+        <div class="logo"><a href="index.html">
+            <img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
+        </div>
     </header>
     <main>
         <h1>Education</h1>
-        <section class="education-page">
+        <section class="education-container width">
             <img class="desktop" src="images/lab-512503_1920.jpg" alt="Long row of science equipment">
             <img class="mobile" src="images/lab-512503_1920_small.jpg" alt="Long row of science equipment">
                 <div class="education-info">
@@ -42,6 +36,12 @@
         </section>
     </main>
     <footer>
+        <ul>
+            <li>Support</li>
+            <li>Internships</li>
+            <li>Volunteer</li>
+            <li>Shop</li>
+        </ul>
        <div class="footer_location">
            <p>Location</p>
            <p>Nordnesparken 3, Bergen</p>
@@ -58,6 +58,7 @@
                <li>Sunday: 09:00-16:00</li>
            </ul>
        </div> 
-    </footer>    
+    </footer>
+    <script src="js/hamburger.js"></script>     
 </body>
 </html>

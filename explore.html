@@ -4,56 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore our activities and get inspired">
-    <title>Community Science Museum | Explore</title>
+    <title>Explore | Community Science Museum</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="primary-nav">
-            <ul>
-                <li class="logo desktop"><a href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a></li>
-                <li class="right-nav"><a class="active" href="explore.html">Explore</a></li>
-                <li class="right-nav"><a href="events.html">Events</a></li>
-                <li class="right-nav"><a href="education.html">Education</a></li>
-                <li class="right-nav"><a href="visit.html">Visit</a></li>
-            </ul>
-            <a class="logo mobile" href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
-        </nav>
-        <nav class="secondary-nav">
-            <ul>
-                <li>Support</li>
-                <li>Internships</li>
-                <li>Volunteer</li>
-                <li>Shop</li>
-                <li class="search-bar">Search</li>
+    <header class="main-nav">
+        <button class="nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
+        <nav>
+            <ul id="navigation" data-visible="false" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="visit.html">Visit</a></li>
             </ul>
         </nav>
+        <div class="logo"><a href="index.html">
+            <img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
+        </div>
     </header>
     <main>
         <h1>Explore</h1>
-        <section class="explore-articles">
-            <div class="explore-articles_specific">
+        <section class="explore-container width">
+            
+            <div class="explore-articles">
                 <img src="images/billetto-editorial-334686-min_small.jpg" alt="Boy painting with VR-goggles on">
-                <h2>Robotics and A.I.</h2>
-                <p>The information revolution is here and robotics and artificial intelligence are the science of the future. You can even say hello and shake the hand of Rob the Robot.</p>
-                <a href="#" class="cta">Read More</a>
+                <div class="explore-text">
+                    <h2>Robotics and A.I.</h2>
+                    <p>The information revolution is here and robotics and artificial intelligence are the science of the future. You can even say hello and shake the hand of Rob the Robot.</p>
+                    <a href="#" class="cta">Read More</a>
+                </div>
             </div>
-            <div class="explore-articles_specific">
+            
+            <div class="explore-articles">
                 <img src="images/mammoth-1257288_1920-min_small.jpg" alt="Skeleton of a mammoth">
-                <h2>Evolution</h2>
-                <p>Discover the origins of life on this planet and how the species we know today have evolved over time</p>
-                <a href="#" class="cta">Read More</a>
+                <div class="explore-text">
+                    <h2>Evolution</h2>
+                    <p>Discover the origins of life on this planet and how the species we know today have evolved over time</p>
+                    <a href="#" class="cta">Read More</a>
+                </div>
+                
             </div>
-            <div class="explore-articles_specific">
+            <div class="explore-articles">
                 <img src="images/celso-405219-min_small.jpg" alt="Phases of the moon">
-                <h2>Cosmology</h2>
-                <p>Explore the wonders of our cosmos. Our fantastic exhibition, 'The Sky Above Us', explores the night sky and what we can see and know about the universe aroound us. Follow the journey of the planets in our solar system</p>
-                <a href="#" class="cta">Read More</a>
+                <div class="explore-text">
+                    <h2>Cosmology</h2>
+                    <p>Explore the wonders of our cosmos. Our fantastic exhibition, 'The Sky Above Us', explores the night sky and what we can see and know about the universe aroound us. Follow the journey of the planets in our solar system</p>
+                    <a href="#" class="cta">Read More</a>
+                </div>
             </div>
         </section>
     </main>
     <footer>
+        <ul>
+            <li>Support</li>
+            <li>Internships</li>
+            <li>Volunteer</li>
+            <li>Shop</li>
+        </ul>
        <div class="footer_location">
            <p>Location</p>
            <p>Nordnesparken 3, Bergen</p>
@@ -70,6 +79,7 @@
                <li>Sunday: 09:00-16:00</li>
            </ul>
        </div> 
-    </footer>    
+    </footer>
+    <script src="js/hamburger.js"></script>     
 </body>
 </html>

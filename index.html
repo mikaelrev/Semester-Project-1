@@ -4,52 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Home page for the Community Science Museum">
-    <title>Community Science Museum | Home</title>
+    <title>Home | Community Science Museum</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="primary-nav">
-            <ul>
-                <li class="logo desktop"><a href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a></li>
-                <li class="right-nav"><a href="explore.html">Explore</a></li>
-                <li class="right-nav"><a href="events.html">Events</a></li>
-                <li class="right-nav"><a href="education.html">Education</a></li>
-                <li class="right-nav"><a href="visit.html">Visit</a></li>
-            </ul>
-            <a class="logo mobile" href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
-        </nav>
-        <nav class="secondary-nav">
-            <ul>
-                <li>Support</li>
-                <li>Internships</li>
-                <li>Volunteer</li>
-                <li>Shop</li>
-                <li class="search-bar">Search</li>
+    <header class="main-nav">
+        <button class="nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
+        <nav>
+            <ul id="navigation" data-visible="false" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="visit.html">Visit</a></li>
             </ul>
         </nav>
+        <div class="logo"><a href="index.html">
+            <img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
+        </div>
     </header>
-    <main>
-        <section class="welcome-section">
-            <img class="welcome-image-desktop" src="images/scientific-2040795_128_3.jpg" alt="Woman doing a science experiment">
-            <img class="welcome-image-mobile" src="images/scientific-2040795_128_3_small.jpg" alt="Woman doing a science experiment">
+    <main class="width">
+        <div class="front-page-img">
+            <img class="desktop" src="images/scientific-2040795_128_3.jpg" alt="Woman doing a science experiment">
+            <img class="front-page-img mobile" src="images/scientific-2040795_128_3_small.jpg" alt="Woman doing a science experiment">
+        </div>
+        </section>
+        <section class="front-page-info">
             <h1>Explore together</h1>
             <h2>Entrance is free for all</h2>
+            <div class="info-container">
+                <div class="info">
+                    <h3>Nordnesparken 3, 5005 Bergen</h3>
+                    <a class="cta" href="https://www.google.com/maps/place/Nordnesparken+3,+5005+Bergen/data=!4m2!3m1!1s0x463cfc1a9259b79b:0x474a3e4a4ab6cc9f?sa=X&ved=2ahUKEwi1srit4uX0AhViQ_EDHZqVAd0Q8gF6BAgXEAE" target="_blank">View on Google Maps</a>
+                </div>
+                <div class="info">
+                    <h3>Open from 10-16 tuesday to friday, 09-16 on weekends</h3>
+                    <a class="cta" href="visit.html">Read More</a>
+                </div>
+            </div>
         </section>
         <section class="welcome-articles">
-            <div class="welcome-articles_specific">
+            <div class="welcome-article-one">
                 <img src="images/samuel-zeller-158996_small.jpg" alt="Boy with VR-goggles">
                 <p>Are you a young person looking to learn more about science? Come on down to our museum, there's plenty to see and do.</p>
                 <a href="#" class="cta">Read More</a>
             </div>
-            <div class="welcome-articles_specific">
+            <div class="welcome-article-two">
                 <img src="images/jesse-orrico-60373_small.jpg" alt="transparent skull with brain and veins showing">
                 <p>Are you looking to get involved with our team of researchers and academics? Our museum offers various ways for you to use our resources and contribute towards them.</p>
                 <a href="#" class="cta">Read More</a>
             </div>
-            <div class="welcome-articles_specific">
+            <div class="welcome-article-three">
                 <img src="images/samuel-zeller-113381_small.jpg" alt="Figure with skull and intestines showing">
                 <p>The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us</p>
                 <a href="#" class="cta">Read More</a>
@@ -57,6 +64,12 @@
         </section>
     </main>
     <footer>
+        <ul>
+            <li>Support</li>
+            <li>Internships</li>
+            <li>Volunteer</li>
+            <li>Shop</li>
+        </ul>
        <div class="footer_location">
            <p>Location</p>
            <p>Nordnesparken 3, Bergen</p>
@@ -73,6 +86,7 @@
                <li>Sunday: 09:00-16:00</li>
            </ul>
        </div> 
-    </footer>    
+    </footer>   
+    <script src="js/hamburger.js"></script> 
 </body>
 </html>

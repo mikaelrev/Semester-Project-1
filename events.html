@@ -4,50 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Find the events that are happening at our museum">
-    <title>Community Science Museum | Events</title>
+    <title>Events | Community Science Museum</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="primary-nav">
-            <ul>
-                <li class="logo desktop"><a href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a></li>
-                <li class="right-nav"><a href="explore.html">Explore</a></li>
-                <li class="right-nav"><a class="active" href="events.html">Events</a></li>
-                <li class="right-nav"><a href="education.html">Education</a></li>
-                <li class="right-nav"><a href="visit.html">Visit</a></li>
-            </ul>
-            <a class="logo mobile" href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
-        </nav>
-        <nav class="secondary-nav">
-            <ul>
-                <li>Support</li>
-                <li>Internships</li>
-                <li>Volunteer</li>
-                <li>Shop</li>
-                <li class="search-bar">Search</li>
+    <header class="main-nav">
+        <button class="nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
+        <nav>
+            <ul id="navigation" data-visible="false" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="visit.html">Visit</a></li>
             </ul>
         </nav>
+        <div class="logo"><a href="index.html">
+            <img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
+        </div>
     </header>
     <main>
        <h1>Events</h1>
-       <section class="events-page">
+       <section class="events-container width">
            <div class="events-articles">
-               <img src="images/roberto-nickson-396152_small.jpg" alt="The museum at night">
-               <h2>Night in the Museum</h2>
-               <p>Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays. Bring your own sleeping bag and get ready to rough it as we go exploring the wonders of science</p>
-               <a href="#" class="cta">Read More</a>
-           </div>
+                <img src="images/roberto-nickson-396152_small.jpg" alt="The museum at night">
+                <div class="events-text">
+                    <h2>Night in the Museum</h2>
+                    <p>Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays. Bring your own sleeping bag and get ready to rough it as we go exploring the wonders of science</p>
+                    <a href="#" class="cta">Read More</a>
+                </div>
+            </div>
+
            <div class="events-articles">
-            <img src="images/teacher-2816112_small.jpg" alt="Cartoon of science teacher doing experiment">
-            <h2>Visiting Professor of aeronautics</h2>
-            <p>It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of Technology will be delivering 3 lectures on the development of aeronautics and where the future lies in this exciting 'space'.</p>
-            <a href="#" class="cta">Read More</a>
+                <img src="images/teacher-2816112_small.jpg" alt="Cartoon of science teacher doing experiment">
+                <div class="events-text">
+                    <h2>Visiting Professor of aeronautics</h2>
+                    <p>It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of Technology will be delivering 3 lectures on the development of aeronautics and where the future lies in this exciting 'space'.</p>
+                    <a href="#" class="cta">Read More</a>
+            </div>
+            
         </div>
        </section>
     </main>
     <footer>
+        <ul>
+            <li>Support</li>
+            <li>Internships</li>
+            <li>Volunteer</li>
+            <li>Shop</li>
+        </ul>
        <div class="footer_location">
            <p>Location</p>
            <p>Nordnesparken 3, Bergen</p>
@@ -64,6 +70,7 @@
                <li>Sunday: 09:00-16:00</li>
            </ul>
        </div> 
-    </footer>    
+    </footer>
+    <script src="js/hamburger.js"></script>     
 </body>
 </html>
