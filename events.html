@@ -9,10 +9,10 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="main-nav">
+        <button class="nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
         <nav>
-            <div class="logo"><a href="index.html"><img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a></div>
-            <ul>
+            <ul id="navigation" data-visible="false" class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="explore.html">Explore</a></li>
                 <li><a href="events.html">Events</a></li>
@@ -20,21 +20,30 @@
                 <li><a href="visit.html">Visit</a></li>
             </ul>
         </nav>
+        <div class="logo"><a href="index.html">
+            <img src="images/CommunityScienceMuseum@2x.png" alt="Community Science Museum logo"></a>
+        </div>
     </header>
     <main>
        <h1>Events</h1>
-       <section class="events-page">
+       <section class="events-container">
            <div class="events-articles">
-               <img src="images/roberto-nickson-396152_small.jpg" alt="The museum at night">
-               <h2>Night in the Museum</h2>
-               <p>Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays. Bring your own sleeping bag and get ready to rough it as we go exploring the wonders of science</p>
-               <a href="#" class="cta">Read More</a>
-           </div>
+                <img src="images/roberto-nickson-396152_small.jpg" alt="The museum at night">
+                <div class="events-text">
+                    <h2>Night in the Museum</h2>
+                    <p>Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays. Bring your own sleeping bag and get ready to rough it as we go exploring the wonders of science</p>
+                    <a href="#" class="cta">Read More</a>
+                </div>
+            </div>
+
            <div class="events-articles">
-            <img src="images/teacher-2816112_small.jpg" alt="Cartoon of science teacher doing experiment">
-            <h2>Visiting Professor of aeronautics</h2>
-            <p>It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of Technology will be delivering 3 lectures on the development of aeronautics and where the future lies in this exciting 'space'.</p>
-            <a href="#" class="cta">Read More</a>
+                <img src="images/teacher-2816112_small.jpg" alt="Cartoon of science teacher doing experiment">
+                <div class="events-text">
+                    <h2>Visiting Professor of aeronautics</h2>
+                    <p>It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of Technology will be delivering 3 lectures on the development of aeronautics and where the future lies in this exciting 'space'.</p>
+                    <a href="#" class="cta">Read More</a>
+            </div>
+            
         </div>
        </section>
     </main>
@@ -61,6 +70,7 @@
                <li>Sunday: 09:00-16:00</li>
            </ul>
        </div> 
-    </footer>    
+    </footer>
+    <script src="js/hamburger.js"></script>     
 </body>
 </html>
