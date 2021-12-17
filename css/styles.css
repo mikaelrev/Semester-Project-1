@@ -13,10 +13,6 @@ main {
   margin: auto;
 }
 
-.front-page-info,
-.welcome-article-one,
-.welcome-article-two,
-.welcome-article-three,
 footer {
   background-color: rgba(5, 75, 166, 0.347);
 }
@@ -34,32 +30,27 @@ h3 {
   margin: 0;
 }
 
+.width {
+  width: 80%;
+}
+
+.mobile {
+  display: none;
+}
+
 footer,
 .main-nav,
-.navigation,
-.info-container,
-.welcome-article-one,
-.welcome-article-two,
-.welcome-article-three,
-.explore-container,
-.explore-articles,
-.events-container,
-.events-articles,
-.education-container,
-.visit-page,
-.visit_opening-hours {
+.navigation {
   display: flex;
 }
 
+footer,
+.navigation {
+  gap: 2rem;
+}
+
 .main-nav,
-.navigation,
-.welcome-article-one,
-.welcome-article-two,
-.welcome-article-three,
-.explore-container,
-.events-articles,
-.education-container,
-.visit_opening-hours {
+.navigation {
   flex-direction: column;
 }
 
@@ -71,43 +62,25 @@ footer {
 footer ul {
   list-style-type: none;
   padding: 0px;
+  margin: 0;
 }
 
-.cta,
+footer li {
+  margin-bottom: 0.5rem;
+}
+
+footer h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
 img {
   border-radius: 3px;
-}
-
-.cta,
-.front-page-img,
-.explore-articles,
-.explore-text * {
-  margin-bottom: 2rem;
-}
-
-.front-page-info h2,
-.explore-container,
-.events-articles,
-.explore-articles,
-.events-container,
-.visit-page,
-.education-container {
-  padding: 2rem;
-}
-
-.navigation,
-.welcome-articles,
-.education-info,
-.explore-container,
-.events-articles,
-.events-container {
-  gap: 2rem;
-}
-
-.front-page-info h1,
-.front-page-info h2,
-.cta {
-  color: #f25244;
 }
 
 .cta {
@@ -116,6 +89,7 @@ img {
   font-weight: 700;
   text-decoration: none;
   padding: 5px 10px;
+  border-radius: 3px;
 }
 
 /* Header */
@@ -151,6 +125,7 @@ img {
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 700;
+  color: black;
 }
 
 .nav-toggle {
@@ -174,12 +149,9 @@ img {
 
 /* Home Page */
 
-.mobile {
-  display: none;
-}
-
-.width {
-  width: 80%;
+.front-page-info,
+.welcome-article {
+  background-color: rgba(5, 75, 166, 0.347);
 }
 
 .front-page-img img {
@@ -187,6 +159,7 @@ img {
   height: 400px;
   object-fit: cover;
   object-position: center left;
+  margin-bottom: 2rem;
 }
 
 .front-page-info {
@@ -195,31 +168,34 @@ img {
   margin: 0 auto 5rem;
 }
 
+.front-page-info h1,
+.front-page-info h2 {
+  color: #f25244;
+}
+
 .front-page-info h1 {
   font-size: 3rem;
   padding: 0;
 }
 
-.navigation a,
-.front-page-info h3 {
-  color: black;
-}
-
 .front-page-info h2 {
+  padding: 2rem;
   font-size: 2rem;
   margin: 0;
 }
 
 .front-page-info h3 {
   font-size: 1.8rem;
+  color: black;
 }
 
 .info-container {
+  display: flex;
   gap: 3rem;
   justify-content: center;
 }
 
-.info {
+.info-container > * {
   width: 40%;
 }
 
@@ -229,100 +205,124 @@ img {
 
 .welcome-articles {
   display: grid;
+  gap: 2rem;
   margin-bottom: 8rem;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.welcome-article-one,
-.welcome-article-two,
-.welcome-article-three {
-  align-items: center;
+.welcome-article {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 1rem;
 }
 
-.welcome-article-one *,
-.welcome-article-two *,
-.welcome-article-three * {
+.welcome-article * {
   width: 80%;
+  margin: 0 auto 2rem;
 }
 
-/* Explore, home, events, and education */
+/* Explore */
 
 .explore-container {
-  margin: auto;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto 8rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.explore-articles {
-  background: rgba(5, 75, 166, 0.347);
+.explore-container > * {
   gap: 5rem;
+  background: rgba(5, 75, 166, 0.347);
+  padding: 2rem;
+  display: flex;
 }
 
-.explore-articles img {
+.explore-container img {
   max-width: 300px;
   object-fit: cover;
 }
 
 .explore-text * {
-  width: 100%;
+  margin-bottom: 2rem;
 }
 
+/* Events */
+
 .events-container {
-  margin: auto;
+  margin: 0 auto 8rem;
+}
+
+.events-container,
+.events-articles {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
 }
 
 .events-articles {
   background: rgba(5, 75, 166, 0.347);
   width: 80%;
   justify-content: center;
-}
-
-.events-text {
-  width: 80%;
+  flex-direction: column;
 }
 
 .events-articles img {
   width: 100%;
 }
 
+.events-text {
+  width: 80%;
+}
+
+/* Education */
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 auto 8rem;
+}
+
+.education-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
 /* Visit */
 
 .visit-page {
-  margin: auto;
+  display: flex;
+}
+
+.visit-page {
+  padding: 2rem;
+  margin: 0 auto 8rem;
 }
 
 .visit_opening-hours {
-  gap: 1rem;
   flex: 1;
 }
 
-.visit_opening-hours img {
-  width: 70%;
+.visit_opening-hours img,
+.visit-info img {
+  margin-bottom: 1.5rem;
 }
 
 .visit-info {
   flex: 1;
-  padding-bottom: 100px;
 }
 
 .visit-info img,
+.visit_opening-hours img,
 .visit-info p {
   width: 70%;
 }
 
 .visit-info p {
   margin-bottom: 3rem;
-}
-
-/* Education */
-
-.education-container {
-  margin: auto;
-}
-
-.education-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 /* Media Queries */
@@ -338,8 +338,7 @@ img {
 
   h1,
   .explore-articles,
-  .visit-info,
-  .visit_opening-hours {
+  .visit-page {
     text-align: center;
   }
 
@@ -351,25 +350,15 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .explore-articles {
-    flex-direction: column;
-    width: 80%;
-    align-items: center;
-    gap: 2rem;
-  }
-
+  .explore-articles,
   .visit-page {
     flex-direction: column;
   }
 
-  .visit-info {
-    order: 1;
-    display: block;
-    padding: 0px;
-  }
-
-  .visit-info h2 {
-    margin-top: 75px;
+  .explore-articles {
+    width: 80%;
+    align-items: center;
+    gap: 2rem;
   }
 
   .visit-info p {
@@ -378,7 +367,6 @@ img {
 
   .visit_opening-hours {
     order: 2;
-    margin-bottom: 100px;
   }
 }
 
@@ -389,10 +377,6 @@ img {
 
   .mobile {
     display: block;
-  }
-
-  .welcome-image {
-    width: 100%;
   }
 
   .info {
@@ -408,7 +392,8 @@ img {
     width: 250px;
   }
 
-  .events-container {
+  .events-container,
+  footer {
     flex-direction: column;
     text-align: center;
   }
@@ -423,20 +408,10 @@ img {
 
   .education-info {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
   .visit-info img,
   .visit_opening-hours img {
     width: 100%;
-  }
-
-  footer {
-    display: block;
-    text-align: center;
-  }
-
-  .footer_opening-times {
-    margin-top: 50px;
   }
 }
