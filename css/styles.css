@@ -30,18 +30,23 @@ h3 {
   margin: 0;
 }
 
-footer,
-.main-nav,
-.navigation {
-  display: flex;
-}
-
 .width {
   width: 80%;
 }
 
 .mobile {
   display: none;
+}
+
+footer,
+.main-nav,
+.navigation {
+  display: flex;
+}
+
+footer,
+.navigation {
+  gap: 2rem;
 }
 
 .main-nav,
@@ -57,28 +62,25 @@ footer {
 footer ul {
   list-style-type: none;
   padding: 0px;
+  margin: 0;
 }
 
-.cta,
+footer li {
+  margin-bottom: 0.5rem;
+}
+
+footer h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
 img {
   border-radius: 3px;
-}
-
-.cta {
-  margin-bottom: 2rem;
-}
-
-.navigation,
-.education-info,
-.events-articles,
-.events-container {
-  gap: 2rem;
-}
-
-.front-page-info h1,
-.front-page-info h2,
-.cta {
-  color: #f25244;
 }
 
 .cta {
@@ -87,6 +89,7 @@ img {
   font-weight: 700;
   text-decoration: none;
   padding: 5px 10px;
+  border-radius: 3px;
 }
 
 /* Header */
@@ -151,15 +154,6 @@ img {
   background-color: rgba(5, 75, 166, 0.347);
 }
 
-.welcome-articles *,
-.info-container {
-  display: flex;
-}
-
-.welcome-article {
-  flex-direction: column;
-}
-
 .front-page-img img {
   width: 100%;
   height: 400px;
@@ -172,6 +166,11 @@ img {
   text-align: center;
   padding: 3rem 0;
   margin: 0 auto 5rem;
+}
+
+.front-page-info h1,
+.front-page-info h2 {
+  color: #f25244;
 }
 
 .front-page-info h1 {
@@ -191,6 +190,7 @@ img {
 }
 
 .info-container {
+  display: flex;
   gap: 3rem;
   justify-content: center;
 }
@@ -210,14 +210,16 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.welcome-articles > div {
-  align-items: center;
+.welcome-article {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 1rem;
 }
 
 .welcome-article * {
   width: 80%;
+  margin: 0 auto 2rem;
 }
 
 /* Explore */
@@ -225,7 +227,7 @@ img {
 .explore-container {
   gap: 2rem;
   padding: 2rem;
-  margin: auto;
+  margin: 0 auto 8rem;
   display: flex;
   flex-direction: column;
 }
@@ -237,26 +239,26 @@ img {
   display: flex;
 }
 
-.explore-container > * img {
+.explore-container img {
   max-width: 300px;
   object-fit: cover;
 }
 
 .explore-text * {
-  width: 100%;
   margin-bottom: 2rem;
 }
 
 /* Events */
 
 .events-container {
-  margin: auto;
+  margin: 0 auto 8rem;
 }
 
 .events-container,
 .events-articles {
   display: flex;
   padding: 2rem;
+  gap: 2rem;
 }
 
 .events-articles {
@@ -280,53 +282,47 @@ img {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  margin: 0 auto 8rem;
+}
+
+.education-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 /* Visit */
 
-.visit-page,
-.visit_opening-hours {
+.visit-page {
   display: flex;
 }
 
 .visit-page {
   padding: 2rem;
-  margin: auto;
+  margin: 0 auto 8rem;
 }
 
 .visit_opening-hours {
-  flex-direction: column;
-  gap: 1rem;
   flex: 1;
 }
 
-.visit_opening-hours img {
-  width: 70%;
+.visit_opening-hours img,
+.visit-info img {
+  margin-bottom: 1.5rem;
 }
 
 .visit-info {
   flex: 1;
-  padding-bottom: 100px;
 }
 
 .visit-info img,
+.visit_opening-hours img,
 .visit-info p {
   width: 70%;
 }
 
 .visit-info p {
   margin-bottom: 3rem;
-}
-
-/* Education */
-
-.education-container {
-  margin: auto;
-}
-
-.education-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 /* Media Queries */
@@ -342,8 +338,7 @@ img {
 
   h1,
   .explore-articles,
-  .visit-info,
-  .visit_opening-hours {
+  .visit-page {
     text-align: center;
   }
 
@@ -355,25 +350,15 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .explore-articles {
-    flex-direction: column;
-    width: 80%;
-    align-items: center;
-    gap: 2rem;
-  }
-
+  .explore-articles,
   .visit-page {
     flex-direction: column;
   }
 
-  .visit-info {
-    order: 1;
-    display: block;
-    padding: 0px;
-  }
-
-  .visit-info h2 {
-    margin-top: 75px;
+  .explore-articles {
+    width: 80%;
+    align-items: center;
+    gap: 2rem;
   }
 
   .visit-info p {
@@ -382,7 +367,6 @@ img {
 
   .visit_opening-hours {
     order: 2;
-    margin-bottom: 100px;
   }
 }
 
@@ -393,10 +377,6 @@ img {
 
   .mobile {
     display: block;
-  }
-
-  .welcome-image {
-    width: 100%;
   }
 
   .info {
@@ -412,7 +392,8 @@ img {
     width: 250px;
   }
 
-  .events-container {
+  .events-container,
+  footer {
     flex-direction: column;
     text-align: center;
   }
@@ -427,20 +408,10 @@ img {
 
   .education-info {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
   .visit-info img,
   .visit_opening-hours img {
     width: 100%;
-  }
-
-  footer {
-    display: block;
-    text-align: center;
-  }
-
-  .footer_opening-times {
-    margin-top: 50px;
   }
 }
