@@ -79,6 +79,10 @@ footer a {
   color: black;
 }
 
+footer a:hover {
+  color: rgb(5, 75, 166);
+}
+
 img {
   border-radius: 3px;
 }
