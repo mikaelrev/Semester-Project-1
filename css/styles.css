@@ -365,6 +365,20 @@ img {
     gap: 2rem;
   }
 
+  .events-container {
+    align-items: center;
+  }
+
+  .events-text {
+    width: 100%;
+  }
+
+  .events-container,
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .visit-info p {
     width: 100%;
   }
@@ -394,12 +408,6 @@ img {
 
   .explore-articles img {
     width: 250px;
-  }
-
-  .events-container,
-  footer {
-    flex-direction: column;
-    text-align: center;
   }
 
   .events-text {
